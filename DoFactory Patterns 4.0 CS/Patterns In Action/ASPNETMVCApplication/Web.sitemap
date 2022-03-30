@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <!-- site map for Patterns-in-Action ASP.NET MVC reference application -->
+  <siteMapNode url="/" title="home" description="" >
+    <siteMapNode url="shop" title="shopping" description="Your shopping starts here">
+      <siteMapNode url="shop/products" title="product catalog"  description="">
+        <siteMapNode url="shop/products/{productid}" title="product details" description="" />
+      </siteMapNode>
+      <siteMapNode url="shop/search" title="search products"  description="" />
+      <siteMapNode url="shop/cart" title="your cart"  description="">
+        <siteMapNode url="shop/cart/checkout" title="checkout"  description="" />
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="admin" title="administration" description="">
+      <siteMapNode url="admin/customers" title="customers" description="">
+        <siteMapNode url="admin/customers/{customerid}" title="customer details"  description="" />
+      </siteMapNode>
+      <siteMapNode url="admin/customers/orders" title="orders" description="" >
+        <siteMapNode url="admin/customers/{customerid}/orders/{orderid}" title="customer orders"  description="" >
+          <siteMapNode url="admin/customers/{customerid}/orders/{orderid}/details" title="line items"  description="" />
+        </siteMapNode>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode url="error" title="error"  description="">
+    </siteMapNode>
+    <siteMapNode url="login" title="login" description="">
+    </siteMapNode>
+    <siteMapNode url="logout" title="logout" description="">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>

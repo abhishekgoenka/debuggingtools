@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Apps>
+    <App DisplayName="pslist" FileName="C:\Code\debuggingtools\mRemoteNG\externaltools\command.bat" Arguments="pslist \\%hostname% -u %domain%\%username% -p %password%" WaitForExit="False" TryToIntegrate="False" />
+    <App DisplayName="Show Password" FileName="C:\Code\debuggingtools\mRemoteNG\externaltools\command.bat " Arguments="mRemotePasswordFinder.exe --password %password%" WaitForExit="True" TryToIntegrate="False" />
+    <App DisplayName="SQL Server" FileName="ssms" Arguments="-s %hostname% -d Works -u chvoe -p Allscripts#1" WaitForExit="False" TryToIntegrate="False" />
+</Apps>

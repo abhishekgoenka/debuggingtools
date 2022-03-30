@@ -1,0 +1,98 @@
+﻿<UserControl 
+  x:Class="Silverlight_Patterns_in_Action.MainPage"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation" 
+  xmlns:uriMapper="clr-namespace:System.Windows.Navigation;assembly=System.Windows.Controls.Navigation"
+  xmlns:dataControls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit" 
+  xmlns:viewmodel="clr-namespace:Silverlight_Patterns_in_Action.ViewModels"
+  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+  mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="480">
+    
+    <Grid x:Name="LayoutRoot" Style="{StaticResource LayoutRootGridStyle}">
+
+        <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
+            <navigation:Frame x:Name="ContentFrame" Style="{StaticResource ContentFrameStyle}" 
+                              Source="/Home" Navigated="ContentFrame_Navigated" NavigationFailed="ContentFrame_NavigationFailed">
+                <navigation:Frame.UriMapper>
+                    <uriMapper:UriMapper>
+                        <uriMapper:UriMapping Uri="" MappedUri="/Views/Home.xaml"/>
+                        <uriMapper:UriMapping Uri="/{pageName}" MappedUri="/Views/{pageName}.xaml"/>
+                    </uriMapper:UriMapper>
+                </navigation:Frame.UriMapper>
+            </navigation:Frame>
+        </Border>
+
+        <Grid Style="{StaticResource NavigationOuterGridStyle}">
+            <Grid x:Name="NavigationGrid" Style="{StaticResource NavigationGridStyle}" ShowGridLines="True">
+               
+                <Border x:Name="BrandingBorder" Style="{StaticResource BrandingBorderStyle}">
+                    <StackPanel x:Name="BrandingStackPanel" Style="{StaticResource BrandingStackPanelStyle}">
+                        <Canvas Background="Transparent" Width="90" Height="90" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="50,5">
+                            <ContentControl Style="{StaticResource DofactoryLogoStyle}" />
+                        </Canvas>
+
+                        <ContentControl Style="{StaticResource BackSwirl}"/>
+
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="LinksBorder" Style="{StaticResource LinksBorderStyle}" DataContext="{StaticResource MyLoginViewModel}">
+                    <StackPanel x:Name="LinksStackPanel" Style="{StaticResource LinksStackPanelStyle}">
+
+                        <HyperlinkButton x:Name="LinkHome" Style="{StaticResource LinkStyle}"  
+                               NavigateUri="/Home" TargetName="ContentFrame" Content="{Binding Path=ApplicationStrings.HomePageTitle, Source={StaticResource ResourceWrapper}}"/>
+
+                        <Rectangle Style="{StaticResource DividerStyle}"/>
+
+                        <HyperlinkButton x:Name="LinkShopping" Style="{StaticResource LinkStyle}" 
+                              NavigateUri="/Shopping" TargetName="ContentFrame" Content="{Binding Path=ApplicationStrings.ShoppingPageTitle, Source={StaticResource ResourceWrapper}}"/>
+
+                        <Rectangle  Style="{StaticResource DividerStyle}"/>
+
+                        <HyperlinkButton x:Name="LinkSearch" Style="{StaticResource LinkStyle}" 
+                            NavigateUri="/Search" TargetName="ContentFrame" Content="{Binding Path=ApplicationStrings.SearchPageTitle, Source={StaticResource ResourceWrapper}}"/>
+
+                        <Rectangle  Style="{StaticResource DividerStyle}"/>
+
+                        <HyperlinkButton x:Name="LinkCart" Style="{StaticResource LinkStyle}" 
+                            NavigateUri="/Cart" TargetName="ContentFrame" Content="{Binding Path=ApplicationStrings.CartPageTitle, Source={StaticResource ResourceWrapper}}"/>
+
+                        <Rectangle  Style="{StaticResource DividerStyle}"/>
+
+                        <HyperlinkButton x:Name="LinkCustomers" Style="{StaticResource LinkStyle}" 
+                             NavigateUri="/Customers" TargetName="ContentFrame" 
+                              Content="{Binding Path=ApplicationStrings.CustomersPageTitle, Source={StaticResource ResourceWrapper}}"
+                              IsEnabled="{Binding AdminLoggedIn}" />
+
+                        <Rectangle Style="{StaticResource DividerStyle}"/>
+                       
+                        <HyperlinkButton x:Name="LinkOrders" Style="{StaticResource LinkStyle}" 
+                             NavigateUri="/Orders" TargetName="ContentFrame" 
+                              Content="{Binding Path=ApplicationStrings.OrdersPageTitle, Source={StaticResource ResourceWrapper}}"  
+                              IsEnabled="{Binding AdminLoggedIn}" /> 
+
+                        <Rectangle Style="{StaticResource DividerStyle}"/>
+
+                        <HyperlinkButton x:Name="LinkCharts" Style="{StaticResource LinkStyle}" 
+                             NavigateUri="/Charts" TargetName="ContentFrame" 
+                              Content="{Binding Path=ApplicationStrings.ChartsPageTitle, Source={StaticResource ResourceWrapper}}"  
+                              IsEnabled="{Binding AdminLoggedIn}" />
+
+                        <Rectangle Style="{StaticResource DividerStyle}"/>
+
+                        <HyperlinkButton x:Name="LinkLogin" Style="{StaticResource LinkStyle}" 
+                             NavigateUri="{Binding LoginUri}" TargetName="ContentFrame" 
+                             Content="{Binding LoginText}"  />
+
+                    </StackPanel>
+                </Border>
+
+            </Grid>
+           
+        </Grid>
+
+    </Grid>
+
+</UserControl>

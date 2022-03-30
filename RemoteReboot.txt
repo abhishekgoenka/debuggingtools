@@ -1,0 +1,1 @@
+psshutdown  \\10.106.24.177 -r -u administrator -p Allscripts#1

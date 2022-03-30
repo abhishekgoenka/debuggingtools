@@ -1,0 +1,12 @@
+ WhoLockMe v2.0.0
+
+Installation :
+- Unzip WhoLockMe.zip
+- Copy "WhoLockMe.dll", "WhoLockMe.exe", "Install.bat" and "Uninstall.bat" in a directory. 
+(for example : c:\Program Files\WhoLockMe)
+- Double-Click on "Install.bat" 
+
+Unistallation :
+- Double-Click on "Uninstall.bat"
+- Reboot (Or Kill Explorer.exe)
+- Delete your "c:\Program Files\WhoLockMe" directory (and the files into)

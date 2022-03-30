@@ -1,0 +1,29 @@
+windbg ANSI Command Tree 1.0
+title {"SOS Commands"}
+body
+{"SOS Commands"}
+ {"Load SOS and SOSEX"} {".loadby sos clr;.load sosex"}
+ {"Modules"}
+  {"All Modules"} {"lm D sm"}
+  {"Loaded Modules"} {"lmo D sm"}
+  {"Loaded Modules (verbose)"} {"lmvo D sm"}
+  {"Modules w/o symbols"} {"lme D sm"}
+ {"Threads"}
+  {"Managed Threads"} {"!threads"}
+  {"Native Threads"} {"~"}
+  {"Thread Pool Threads"} {"!threadpool"}
+  {"Sync Block Deadlocks"} {"!dlk"}
+ {"Stacks"}
+  {"Current Managed Stack"} {"!clrstack"}
+  {"Current Stack with Managed Parameters and Locals"} {"!mk -a"}
+  {"Current Native Stack"} {"kP"}
+  {"All Managed Stacks"} {"~*e!clrstack"}
+  {"All Stacks with Managed Parameters and Locals"} {"~*e!mk -a"}
+  {"All Native Stacks"} {"~*kP"}
+ {"Memory"}
+  {"Stack Objects"} {"!dso"}
+  {"GC Heap"} {"!eeheap -gc"}
+  {"Heap Stats"} {"!dumpheap -stat"}
+  {"Objects > 500 bytes"} {"!dumpheap -min 500"}
+  {"Objects > 1000 bytes"} {"!dumpheap -min 1000"}
+  {"Gen 2 Objects"} {"!dumpgen 2 -stat"}

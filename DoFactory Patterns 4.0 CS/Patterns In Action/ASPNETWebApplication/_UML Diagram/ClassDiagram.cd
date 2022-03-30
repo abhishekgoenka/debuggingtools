@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ASPNETWebApplication.Repositories.AuthRepository" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Repositories\AuthRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Repositories.ProductRepository" Collapsed="true">
+    <Position X="5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAQAAAAAAQAAACAAABAA=</HashCode>
+      <FileName>Repositories\ProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Repositories.PriceRange" Collapsed="true">
+    <Position X="12.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Repositories\PriceRanges\PriceRange.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Repositories.PriceRangeItem" Collapsed="true">
+    <Position X="12.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAYAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\PriceRanges\PriceRangeItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Repositories.CartRepository" Collapsed="true">
+    <Position X="7.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAgAAAAAAEAACAABAAAAA=</HashCode>
+      <FileName>Repositories\CartRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Repositories.RepositoryBase" Collapsed="true">
+    <Position X="5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Repositories\RepositoryBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Repositories.CustomerRepository" Collapsed="true">
+    <Position X="2.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAABAAAAAIAACAAAAAAAAAABAABAAA=</HashCode>
+      <FileName>Repositories\CustomerRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Repositories.OrderRepository" Collapsed="true">
+    <Position X="9.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repositories\OrderRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAdmin.Admin" Collapsed="true">
+    <Position X="10.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>WebAdmin\Admin.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAdmin.Orders" Collapsed="true">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAABAAAAAAEAAAAAAAACAAAAQAAAAAIAAAA=</HashCode>
+      <FileName>WebAdmin\Orders.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAdmin.Customer" Collapsed="true">
+    <Position X="12.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAIAAAAECAAQAQAAAAAAAAAEAAEBBAAAEAAAAIAAAA=</HashCode>
+      <FileName>WebAdmin\Customer.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAdmin.Customers" Collapsed="true">
+    <Position X="14" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAgAAAAEABAAQAAAAAAAAAABAAAAAKAAAAAAIAAAA=</HashCode>
+      <FileName>WebAdmin\Customers.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAdmin.Order" Collapsed="true">
+    <Position X="10.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIgAAAACAAAAAAAAEAAAAgAAAAABAIAAAAAAIAAAA=</HashCode>
+      <FileName>WebAdmin\Order.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAdmin.OrderDetails" Collapsed="true">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAKgAAAACAAAAAAAAAAAAAgAACAABAAAAAAAAIAAAA=</HashCode>
+      <FileName>WebAdmin\OrderDetails.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebShop.Cart" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABggAQCAADDAAAAAAIAAAAEEACCQBIAAAAAAAIAAAA=</HashCode>
+      <FileName>WebShop\Cart.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebShop.Shopping" Collapsed="true">
+    <Position X="8" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>WebShop\Shopping.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebShop.Checkout" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>WebShop\Checkout.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebShop.Product" Collapsed="true">
+    <Position X="8" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIAAAAACAgAAAABAAAAAAAAAAAAAMAACBAACIAAAg=</HashCode>
+      <FileName>WebShop\Product.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebShop.Products" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAEBBAABAAgAAAAAAAAgAAIAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>WebShop\Products.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebShop.Search" Collapsed="true">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAABBAABAAAAAAAAAAoAEAIgACIAAAAAACIAAAA=</HashCode>
+      <FileName>WebShop\Search.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Default" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Default.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Error" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Error.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.SiteMasterPage" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAgAAAAAAAAAAAAEABIAAAEAACAACIAAIAAQA=</HashCode>
+      <FileName>SiteMasterPage.Master.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PageBase" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAgBABCAAIAAAAAAgQAAAIAABABAAAAAQAAAAAQE=</HashCode>
+      <FileName>Code\PageBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAuth.Login" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEABAAAEAAAAAEAQAACAAABAAAAAAIAAAA=</HashCode>
+      <FileName>WebAuth\Login.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.WebAuth.Logout" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>WebAuth\Logout.aspx.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Controls.MenuComposite" Collapsed="true">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgBAQAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Code\Controls\MenuComposite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.Controls.MenuCompositeItem" Collapsed="true">
+    <Position X="10.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAEAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Code\Controls\MenuCompositeItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.ViewStateProviderBase" Collapsed="true">
+    <Position X="20" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Code\ViewState\ProviderBase\ViewStateProviderBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.ViewStateProviderServiceSection" Collapsed="true">
+    <Position X="21" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Code\ViewState\ProviderBase\ViewStateProviderServiceSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.ViewStateProviderCollection" Collapsed="true">
+    <Position X="18.25" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Code\ViewState\ProviderBase\ViewStateProviderCollection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.ViewStateProviderService" Collapsed="true">
+    <Position X="18.25" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIACAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAIAA=</HashCode>
+      <FileName>Code\ViewState\ProviderBase\ViewStateProviderService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.GlobalViewStateSingleton" Collapsed="true">
+    <Position X="21" Y="2" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgAAA=</HashCode>
+      <FileName>Code\ViewState\GlobalViewStateSingleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.ViewStateProviderSession" Collapsed="true">
+    <Position X="20" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Code\ViewState\ViewStateProviderSession.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.ViewStateProviderCache" Collapsed="true">
+    <Position X="17.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Code\ViewState\ViewStateProviderCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ASPNETWebApplication.ViewState.ViewStateProviderGlobal" Collapsed="true">
+    <Position X="22.25" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Code\ViewState\ViewStateProviderGlobal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

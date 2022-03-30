@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3f186b72-6cab-4eb6-a5bc-16d8ff1a1274" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:4753/ActionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ActionService.wsdl" MetadataType="Wsdl" ID="3e699c16-1865-4e65-8a5c-cafc5b3fcd35" SourceId="1" SourceUrl="http://localhost:4753/ActionService.svc?wsdl" />
+    <MetadataFile FileName="ActionService.xsd" MetadataType="Schema" ID="c17a87a9-890e-41b1-ab2e-e9271882f193" SourceId="1" SourceUrl="http://localhost:4753/ActionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ActionService1.xsd" MetadataType="Schema" ID="024720ac-0c3e-439f-a138-b22448809f3e" SourceId="1" SourceUrl="http://localhost:4753/ActionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ActionService2.xsd" MetadataType="Schema" ID="3d72aa45-bb36-46a1-9f11-461186f38924" SourceId="1" SourceUrl="http://localhost:4753/ActionService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ActionService3.xsd" MetadataType="Schema" ID="0f9e5f1a-9dcc-4c28-9e51-35c1e8d08486" SourceId="1" SourceUrl="http://localhost:4753/ActionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ActionService.disco" MetadataType="Disco" ID="9e63c539-beba-4ee7-bc5f-6ffe0a75e8f9" SourceId="1" SourceUrl="http://localhost:4753/ActionService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

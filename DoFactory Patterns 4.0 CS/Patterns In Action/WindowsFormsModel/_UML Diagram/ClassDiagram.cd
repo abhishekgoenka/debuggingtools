@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowsFormsModel.BusinessObjects.CustomerModel" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAAAAAAAAAAAAIAAAAAAAAAAIAABAAAAAABAAAAAA=</HashCode>
+      <FileName>BusinessObjects\CustomerModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsModel.BusinessObjects.OrderModel" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>OAEAAABAAAAAAAAAABAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BusinessObjects\OrderModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsModel.BusinessObjects.OrderDetailModel" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAgAAIAAA=</HashCode>
+      <FileName>BusinessObjects\OrderDetailModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsModel.DataTransferObjectMapper.Mapper" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAgAAAAAAAAgAAA=</HashCode>
+      <FileName>DataTransferObjectMapper\Mapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsModel.Model" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAASAIAQAAAAAABAAAAAIAECAAQAAAAAAQAAABAAA=</HashCode>
+      <FileName>Model.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="WindowsFormsModel.IModel" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAQAAAAAABAAAAAIAACAAAAAAAAAQAAABAAA=</HashCode>
+      <FileName>IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

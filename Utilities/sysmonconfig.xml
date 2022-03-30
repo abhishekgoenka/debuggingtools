@@ -1,0 +1,52 @@
+<!--
+   This is a Microsoft Sysmon configuation to be used on Windows server systems
+   v0.2.1 December 2016
+   Florian Roth
+
+   The focus of this configuration is
+   - hacking activity on servers / lateral movement (bad admin, attacker)
+   It is not focussed on
+   - malware detection (execution)
+   - malware detection (network connections)
+   
+   See Windows workstation base config: https://gist.github.com/Neo23x0/f56bea38d95040b70cf5
+   Sample version : https://github.com/MotiBa/Sysmon/blob/master/config_v3.xml
+-->
+<Sysmon schemaversion="3.20">
+   <!-- Capture MD5 Hashes -->
+   <HashAlgorithms>MD5,SHA1,SHA256</HashAlgorithms>
+   <EventFiltering>
+      <!-- Log all drivers except if the signature -->
+      <!-- contains Microsoft or Windows -->
+      <DriverLoad onmatch="exclude">
+         <Signature condition="contains">microsoft</Signature>
+         <Signature condition="contains">windows</Signature>
+      </DriverLoad>
+      <!-- Exclude certain processes that cause high event volumes -->
+      <ProcessCreate onmatch="include">
+         <Image condition="contains">Applications.CSSWorkerDotNet.exe</Image>
+      </ProcessCreate>
+      <!-- Do only log remote thread creation events with certain targets-->
+      <CreateRemoteThread onmatch="include">
+         <TargetImage condition="image">Applications.CSSWorkerDotNet.exe</TargetImage>
+      </CreateRemoteThread>
+      <!-- Do log file creation time stamps -->
+      <FileCreateTime onmatch="exclude"/>
+      <!-- Do log raw disk access (caused event flooding with certain disk encryption drivers) -->
+      <RawAccessRead onmatch="exclude"/>
+      <!-- Do log process termination -->
+      <ProcessTerminate onmatch="exclude"/>
+      <!-- Do registry events to certain keys only (Autostart, Services, Debuggers) -->
+      <RegistryEvent onmatch="exclude">
+      </RegistryEvent>
+      <!-- Do log file creation events -->
+      <FileCreate onmatch="exclude" />
+      <!-- Do not log if file stream is created -->
+      <FileCreateStreamHash onmatch="include" />
+      <!-- Do only log network connections to web ports -->
+      <NetworkConnect onmatch="include">
+         <Image condition="contains">Applications.CSSWorkerDotNet.exe</Image>
+         <Image condition="contains">TWMessageCenterSpooler.exe</Image>
+      </NetworkConnect>
+   </EventFiltering>
+</Sysmon>

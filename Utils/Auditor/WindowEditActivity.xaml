@@ -1,0 +1,71 @@
+﻿<Window x:Class="Auditor.WindowEditActivity"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Activity" Height="500" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        DataContext="{Binding Main, Source={StaticResource Locator}}" Icon="icon.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        <Label Content="Id" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" />
+        <Label Content="{Binding SelectedActivity.ID}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0"
+               Margin="73,0,0,0" />
+
+        <Label Content="Time spend" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,57,0,0" />
+        <TextBox Text="{Binding SelectedActivity.TimeSpend}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,57,0,0" Width="50" />
+
+        <Label Content="Object name" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,88,0,0" />
+        <TextBox Text="{Binding SelectedActivity.ObjectName}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,88,0,0" Width="200" />
+
+        <Label Content="Tool name" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,119,0,0" />
+        <TextBox Text="{Binding SelectedActivity.ToolName}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,119,0,0" Width="200" />
+
+        <Label Content="Project id" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,150,0,0" />
+        <TextBox Text="{Binding SelectedActivity.ProjectID}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,150,0,0" Width="75" />
+
+        <Label Content="Old action" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,181,0,0" />
+        <TextBox Text="{Binding SelectedActivity.OldActionType}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,181,0,0" Width="75" />
+
+        <Label Content="Version" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,212,0,0" />
+        <TextBox Text="{Binding SelectedActivity.Version}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,212,0,0" Width="150" />
+
+        <Label Content="Exename" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,243,0,0" />
+        <TextBox Text="{Binding SelectedActivity.ExeName}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,243,0,0" Width="150" />
+
+        <Label Content="ArtifactType" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,274,0,0" />
+        <TextBox Text="{Binding SelectedActivity.ArtifactType}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,274,0,0" Width="20" />
+
+        <Label Content="Appid" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,305,0,0" />
+        <TextBox Text="{Binding SelectedActivity.AppID}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,305,0,0" Width="60" />
+
+        <Label Content="Objectid" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,336,0,0" />
+        <TextBox Text="{Binding SelectedActivity.ObjID}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,336,0,0" Width="60" />
+
+        <Label Content="Action type" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="0" Margin="0,367,0,0" />
+        <TextBox Text="{Binding SelectedActivity.ActionType}" HorizontalAlignment="Left" VerticalAlignment="Top"
+                 Grid.Row="0" Margin="73,367,0,0" Width="60" />
+
+        <Button Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Row="1"
+                Margin="229,18,0,0" Command="{Binding ExecuteEditActivitySave}" IsDefault="True" />
+        <Button Content="Cancel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Row="1"
+                Margin="309,18,0,0" Click="Button_Click" />
+        <Button Content="Fill Defaults" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Grid.Row="1"
+        	Margin="150,18,0,0" Command="{Binding ExecuteFillVS2013Default}" IsDefault="True" />
+        <Button Content="Save Current Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Width="126" Grid.Row="1"
+        	Margin="19,18,0,0" Command="{Binding SaveCurrentSettingsCommand}" IsDefault="True" />
+
+
+    </Grid>
+
+</Window>

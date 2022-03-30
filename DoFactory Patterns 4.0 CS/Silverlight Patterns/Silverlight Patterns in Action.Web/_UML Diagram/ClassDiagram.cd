@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Silverlight_Patterns_in_Action.Web.User" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Models\Shared\User.shared.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silverlight_Patterns_in_Action.Web.Services.Web.ActionDomainService" Collapsed="true">
+    <Position X="1.5" Y="2.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQEAARCAAAAAJQAAAAAAAYIAAAEAAAAAAAABAAA=</HashCode>
+      <FileName>Services\ActionDomainService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silverlight_Patterns_in_Action.Web.Category" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQABAAAAAEiQgAAIAAAAAAAECAAAAAEAAQiAACgAAQ=</HashCode>
+      <FileName>Services\ActionDomainService.metadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silverlight_Patterns_in_Action.Web.Customer" Collapsed="true">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAQAAQAAhAAiAIQAQAAAAAAAIAABAAgEAIAAAQAEA=</HashCode>
+      <FileName>Services\ActionDomainService.metadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silverlight_Patterns_in_Action.Web.Order" Collapsed="true">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>OAEEIEBgAQgQgAAAIBQAIAQAUAAAEBBAYBAAACAwACA=</HashCode>
+      <FileName>Services\ActionDomainService.metadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silverlight_Patterns_in_Action.Web.OrderDetail" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cAkHAAAEQQAA4QEAIAEACAAAEAAAAAAAAgAAgAglAAE=</HashCode>
+      <FileName>Services\ActionDomainService.metadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silverlight_Patterns_in_Action.Web.Product" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MIwIAQQAAAAAYgEAIBAACAAAECAAAAEAIgAgAAyoCAo=</HashCode>
+      <FileName>Services\ActionDomainService.metadata.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Silverlight_Patterns_in_Action.Web.AuthenticationService" Collapsed="true">
+    <Position X="1.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\AuthenticationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

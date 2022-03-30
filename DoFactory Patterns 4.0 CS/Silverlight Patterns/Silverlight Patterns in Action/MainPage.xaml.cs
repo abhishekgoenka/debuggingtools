@@ -1,0 +1,46 @@
+﻿using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Navigation;
+
+namespace Silverlight_Patterns_in_Action
+{
+    /// <summary>
+    /// User control class providing the main UI for the application.
+    /// </summary>
+    //[Export]
+    public partial class MainPage : UserControl
+    {
+        /// <summary>
+        /// Constructor. Creates a new MainPage instance.
+        /// </summary>
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        // After the Frame navigates, ensure the menu representing the current page is selected
+        private void ContentFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            foreach (var child in LinksStackPanel.Children)
+            {
+                var hb = child as HyperlinkButton;
+                if (hb != null && hb.NavigateUri != null)
+                {
+                    if (hb.NavigateUri.ToString().Equals(e.Uri.ToString()))
+                        VisualStateManager.GoToState(hb, "ActiveLink", true);
+                    else
+                        VisualStateManager.GoToState(hb, "InactiveLink", true);
+                }
+            }
+        }
+
+        /// <summary>
+        /// If an error occurs during navigation, show an error window
+        /// </summary>
+        private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            e.Handled = true;
+            ErrorWindow.CreateNew(e.Exception);
+        }
+    }
+}

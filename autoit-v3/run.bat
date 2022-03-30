@@ -1,0 +1,1 @@
+CALL C:\Users\agoenka\Downloads\autoit-v3\install\AutoIt3.exe C:\Users\agoenka\Downloads\autoit-v3\install\CustomScripts\KeepVSActive.au3

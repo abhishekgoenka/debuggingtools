@@ -1,0 +1,698 @@
+﻿/* 
+ * Patterns-in-Action stylesheet.
+ * Copyright (c) Data & Object Factory, LLC. All rights reserved.
+ * www.dofactory.com
+ */
+
+body 
+{
+    margin: 0;
+    padding: 0;
+    font-family: arial, helvetica, sans-serif;
+    font-size: medium;
+    line-height: 1.6em;
+    text-align: left;
+}
+
+.form
+{
+	padding: 0;
+	margin: 0;
+}
+
+/* ---- [ container of all contents ] -----*/
+
+#container 
+{
+ 	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 95%; 
+	text-align: left;
+ 	background: #fff; 
+	position: relative;
+}
+
+/* -------[ header & logo configuration ]--------- */
+
+#header
+{
+	width: 100%;
+	height: 90px;
+	margin: 0 auto;
+	padding: 0;
+ 	/* border-bottom: 0px solid #000; */
+ 	/* background-color: #ff6600;  */
+ 	background:url(/assets/images/app/header.jpg);
+}
+
+#logo 
+{
+    float: left;
+    display: block;
+    width: 200px;
+    height: 90px;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    text-decoration: none;
+    /* border-right : 0px solid #000; */
+    /* background-color : #ff9A00; */
+}
+
+#logo a.img
+{
+    position:absolute;
+	border-style: none;
+	display: block;
+	width:200px;
+	height:116px;
+	
+	/*width: 85px;
+	height: 85px;
+	margin-top: 3px;
+	margin-left: 18px;*/
+	background: url(/assets/images/app/logoblue.jpg) no-repeat top left; 
+}
+
+#header #logo a
+{
+	text-decoration: none;
+	border-bottom: 0px;
+}
+
+#header span 
+{
+    color:#fff;
+	position: absolute;
+	font-size: 250%;
+	/* font-weight: bold; */
+	top: 35px;
+	left: 220px;
+	
+}
+
+
+/*
+html>body #header span 
+{
+	top: 35px;
+}
+*/
+
+/* -------[ sub header/banner configuration ]------ */
+
+#subheader
+{
+	width: 100%;
+	height: 28px;
+	margin: 0 auto;
+	padding: 0;
+ 	border-bottom: 1px solid #000;
+ 	background-color: #000; 
+}
+
+#subheader-left
+{
+    float: left;
+    display: block;
+    width: 200px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    text-decoration: none;
+    border-right: 1px solid #000;
+    background-color: #000;
+}
+
+#subheader-right
+{
+    float:left;
+}
+
+#subheader-right img
+{
+    float: left;
+	border-style: none;
+	display: block;
+	width: 21px;
+	height: 17px;
+	/*margin: 7px 2px 0 3px; */
+	margin-top: 7px;
+	margin-left: 20px;
+	margin-right: 6px;
+}
+
+#subheader-right span  /* bread crumbs */
+{
+    color:#fff;
+    float: left;
+    display: block;
+	border-style: none;
+	margin:2px 0 0 3px;
+	font-size: 10pt;
+	font-family: Verdana;
+	
+}
+
+#subheader-right a, #subheader-right a:hover
+{
+    font-size:12px;
+    color:#fff;
+    border-bottom:1px solid #000;
+}
+
+#subheader-right a:hover
+{
+    border-bottom:1px solid #fff;
+}
+
+
+/* --- [ menu ] ----- */
+
+#menu
+{
+	float: left;
+	width: 200px;
+	margin: 0;
+	padding: 20px 0 0 0 ;
+	background-color:White;
+	display:block;
+}
+
+#navcontainer 
+{ 
+	width: 160px; 
+
+}
+
+#navcontainer ul
+{
+	margin-left: 0;
+	padding-left: 0;
+	list-style-type:none;
+}
+
+#navcontainer a
+{
+	display: block;
+	width: 160px;
+	height: 20px;
+	padding: 0 0 5px 30px;
+	font-size: 10pt;
+	border-bottom: dashed 1px #999999;
+}
+
+#navcontainer a:link, #navcontainer a:visited
+{
+	color:#000;
+	text-decoration: none;
+}
+
+#navcontainer a:hover
+{
+	color: #ff6600;
+	text-decoration:underline;
+	
+}
+
+#navcontainer .indented
+{
+	text-indent:14px;
+}
+
+
+#navcontainer a.selected
+{
+	color: #ff6600;
+	text-decoration:underline;
+	
+}
+
+
+/* --- [ misc ] ----- */
+
+.hidden 
+{
+    display: none;
+    color: white;
+    text-decoration: none;
+    background-color: yellow;
+}
+
+#main-body
+{
+    float:left;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#content 
+{
+    float: left;
+    margin-top:15px;
+    margin-left:10px;
+	padding: 5px 0px 0px 10px;
+	width:615px;
+    font-size: 85%;
+    line-height: 18px;
+}
+
+#performance
+{
+	color: #888;
+	padding: 15px;
+	text-indent:15px;
+	font-size:9pt;
+}
+
+.sortmessage
+{
+    color:#777; 
+    font-size:8pt;
+}
+
+/* main page display patterns */
+
+div.patternhead
+{
+	width: 100%; 
+	height: 20px; 
+	margin-top:25px;
+	background-color:  #ff9A00;
+	text-indent:5px;
+	font-weight:bold;
+	border-bottom:solid 1px #999;
+	border-left:solid 1px #999;
+}
+
+p.patterndesc
+{
+	margin-left:15px;
+}
+
+/* --- [ miscellaneous html ] ------ */
+
+td
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+	font-weight: bold;
+}
+
+h1 
+{
+	margin:1em 0 2em 0;
+	font-size:14pt;
+	color:#ee6600;
+}
+
+h2 
+{
+	margin:0.3em 0 0.8em 0;
+	border-bottom:1px dotted #999;
+	color:#944;
+	font-size:13pt;
+}
+
+h3 
+{
+	margin:0 0 0.1em 0;
+	font-size:11pt;
+	color:#000;
+}
+
+hr 
+{
+  border:0;
+  border-top: 1px solid #ccc;
+  height: 0;
+  background: #ccc;
+  width: 91%;
+}
+
+/* ---[ links ]------------------------------- */
+
+a:link , a:visited
+{
+	color: #006666;
+	text-decoration: none;
+	border-bottom: 1px solid #006666;
+/*	border-bottom: 1px solid #a00; 
+    text-decoration: underline;*/
+}
+
+a:hover 
+{
+    color: #669966;
+    border-color: #669966;
+}
+
+/* ---[ back link ]---------------------------- */
+
+#back
+{
+	height: 22px;
+	float: right;
+}
+
+/* --- [ shopping cart page ] ------------- */
+
+.cartline
+{
+    text-align: right;
+    height: 30px;
+    width: 600px;
+}
+
+.cartlink
+{
+    font-size: 10pt;
+    text-decoration: underline;
+    border-bottom: none;
+}
+
+/* ---- [customers page] ----- */
+    
+#customers
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height:30px;
+    width:600px;
+ }
+
+#customerserror
+{
+    float: left;
+    margin: 0;
+    color: #e00;
+    background-color: Yellow;
+    font-weight: normal;
+}
+
+#addnewcustomer
+{
+    float:right;
+    margin:0;
+}
+
+/* --- [customer detail page] ---- */
+
+.customerlabel
+{
+    width:140;
+    height:24;
+    background-color: #900;
+    font-weight:bold;
+    color: #ffc;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.customerfield
+{
+    width: 180;
+    background-color: White;
+    padding-left:10px;
+}
+
+/* --- [position customer and product images] ---  */
+
+.floatright
+{
+  float:right;
+  width:180px;
+  margin:0 0 0 10px; 
+  padding: 0 20px 20px 20px;
+  text-align:left;
+}
+
+/* --- [zones are areas both left/right positions] ---- */
+
+.headline
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 80px;
+    width: 600px;
+ }
+
+.headline-left
+{
+    float: left;
+    margin: 0;
+    /*color: #ee0000;*/
+    font-weight: normal;
+}
+
+.headline-right
+{
+    float: right;
+    margin: 1em 0 1em 0;
+}
+
+
+/* ---- [gridview headers] ------ */
+
+.table-header
+{
+    font-weight: bold;
+    font-size: 11pt;
+    color: #FFFFCC; 
+    background:#004;
+}
+
+.table-header a:link
+{
+    color: #FFFFCC; 
+    text-decoration: none;
+    border: none;
+}
+
+.table-header a:visited
+{
+    color: #FFFFCC; 
+    text-decoration: none;
+    border: none;
+}
+
+.table-header a:hover
+{
+    color: #FFFFCC; 
+    text-decoration: underline; 
+}
+
+.tablerow
+{
+    color:#333;
+    background-color:#fffaf0;
+}
+
+.tablerow-alt
+{
+    color:#333;
+    background-color:#fff;
+}
+
+
+a.selected-asc:link,
+a.selected-asc:visited,
+a.selected-asc:hover,
+a.selected-asc:active
+{
+    padding-right: 15px; 
+    background: url(/assets/images/app/sortasc.gif) no-repeat center right;
+}
+
+a.selected-desc:link,
+a.selected-desc:visited,
+a.selected-desc:hover,
+a.selected-desc:active
+{
+	padding-right: 15px;
+	background: url(/assets/images/app/sortdesc.gif) no-repeat center right;
+}
+
+/* update progress control */
+
+.updateprogress
+{
+   position:absolute;
+   top:300px;
+   left:40%; 
+   padding:16px 46px; 
+   border:solid 1px Black; 
+   background-color:#ffffcc;
+}
+
+.table-list
+{
+   /* border: 1px solid #c96; */
+    width:600px;
+    
+}
+
+.table-details
+{
+    border: 2px solid #fff;
+    width:360px;
+    background:#fffaf0;
+}
+
+.table-details-label
+{
+     text-align:right;
+     color:#fff;
+     background:#004;
+     font-weight:normal;
+     width:120px;
+}
+
+.table-details-title
+{
+  background:#ffe4b5;
+  font-weight:bold;
+}
+
+
+/* all submit buttons */
+
+input[type=submit]
+{
+    color:#fff;
+    background-color:#dd6600;
+    border-color:#555555;
+    border-width:1px;
+    border-style:outset;
+    font-weight:normal;
+    font-size:13px;
+    
+}
+
+
+.validation-summary-errors
+{
+    background: #f40;
+    padding: 2px;
+    color: #fff;
+    /*margin:20px 0 20px 0; */
+}
+
+.validation-summary-errors ul
+{
+    list-style: none;
+}
+.validation-summary-errors li
+{
+   padding:0;
+   margin:0;
+}
+
+.result-summary-valid
+{
+    background:#ffa;
+    padding: 5px;
+    color:#d00;
+    margin:10px 0;
+}
+
+.login-heading
+{
+    color:#fff;
+    width:346px;
+    background:#000;
+    padding:3px 2px 3px 10px;
+}
+
+.login-label
+{
+    text-align:right;
+    background:#FFF5DD;
+    width:80px;
+    padding:6px;
+    float:left;
+    
+}
+
+.login-field
+{
+    width:256px;
+    background:#FFF5DD;
+    padding:4px;
+    float:left;
+    
+}
+
+.login-box
+{
+    padding:20px 0 0 95px;
+}
+
+
+.customer-image
+{
+    width:100px;
+    height:100px;
+    position:absolute;
+    top:220px;
+    left:720px;
+}
+
+.editor-label
+{
+    text-align:right;
+    color:#fff;
+    background-color:#004;
+    font-weight:normal;
+    width:130px;
+    padding:6px;
+    border: 1px solid white;
+    float:left;
+}
+
+.display-field
+{
+    width:250px;
+    background:#ffe4b5;
+    font-weight:bold;
+    padding:6px;
+    float:left;
+    border: 1px solid #fff;
+    margin:0 0 0 0px;
+    height:18px;
+}
+
+.editor-field
+{
+    width:256px;
+    background:#fffaf0;
+    
+    padding:3px;
+    float:left;
+    border: 1px solid #fff;
+    margin:0 0 0 0px;
+}
+
+.text-box
+{
+    width:200px;
+}
+
+.button-box
+{
+    padding:20px 0 0 150px;
+}
+
+
+.clear
+{
+    clear:both;
+}

@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+
+    <link type="text/css" href="/assets/css/dofactorysky.css" rel="stylesheet" />
+    <script type="text/javascript" src="/assets/scripts/jquery-1.3.2.min.js"></script> 
+</head>
+
+<body id="patterns-in-action">
+  <div id="container">
+
+   <%-- Header --%>
+        
+    <div id="header">
+      <div id="logo"><a href="/" class="img"></a></div>
+      <span>Patterns in Action<font size="3" style="padding:0 0 0 30px;">- &nbsp;ASP.NET MVC</font></span>
+    </div>
+
+    <%-- Subheader --%>
+    
+    <div id="subheader">
+        <div id="subheader-left"></div>
+        <div id="subheader-right">
+          <img src="/assets/images/app/arrow.gif" alt="" />
+            <span><% = Html.BreadCrumbs() %></span>
+        </div>
+    </div>
+    <div style="height:4px;background:#6666ff;"></div>
+
+
+    <%-- Body --%>
+    
+    <div id="main-body">
+
+        <table border="0" cellpadding="0" cellspacing="0">
+         <tr>
+          <td valign="top" align="left">
+
+            <%-- Menu --%>
+
+            <div id="menu">
+
+              <div id="navcontainer">
+                <ul id="navlist">
+
+                   <%-- Home --%>
+
+                   <li><% = Html.Menu("home", "Index", "Home", new { area = "" }) %></li>
+
+                   <%-- Shopping --%>
+
+                   <li><% = Html.Menu("shopping", "Index", "Shop", new { area = "Shop" } ) %></li>
+                   <li class="indented"><% = Html.Menu("products", "Products", "Shop", new { area = "Shop" }) %></li>
+                   <li class="indented"><% = Html.Menu("search", "Search", "Shop", new { area = "Shop" }) %></li>
+                   <li class="indented"><% = Html.Menu("cart", "Cart", "Shop", new { area = "Shop" }) %></li>
+
+                   <%-- Admin --%>
+
+                   <li><% = Html.Menu("administration", "Index", "Admin", new { area = "Admin" }) %></li>
+                   <li class="indented"><% = Html.Menu("customers", "Customers", "Admin", new { area = "Admin" }) %></li>
+                   <li class="indented"><% = Html.Menu("orders", "Orders", "Admin", new { area = "Admin" }) %></li>
+
+                   <%-- Login/Logout--%>
+
+                   <% if (!Request.IsAuthenticated) { %>
+                      <li><% = Html.Menu("login", "Login", "Auth", new { area = "Auth" }) %></li>
+                   <% } else { %>
+                      <li><% = Html.Menu("logout", "Logout", "Auth", new { area = "Auth" }) %></li>
+                   <%} %>
+                 </ul>
+                 
+              </div>
+            </div> 
+          </td>
+
+          <td valign="top" align="left">
+
+           <%-- Content --%>
+          
+           <div id="content">
+             <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+           </div>
+         
+          </td>
+         </tr>
+        </table>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

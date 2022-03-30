@@ -1,0 +1,186 @@
+Object Inspection                  Examining code and stacks
+-----------------------------      -----------------------------
+DumpObj (do)                       Threads
+DumpArray (da)                     CLRStack
+DumpStackObjects (dso)             IP2MD
+DumpAllExceptions (dae)            BPMD
+DumpHeap                           U
+DumpVC                             DumpStack
+GCRoot                             EEStack
+ObjSize                            GCInfo
+FinalizeQueue                      EHInfo
+PrintException (pe)                COMState
+TraverseHeap
+DumpField (df)
+DumpDynamicAssemblies (dda)
+GCRef
+DumpColumnNames (dcn)
+DumpRequestQueues
+DumpUMService
+
+Examining CLR data structures      Diagnostic Utilities
+-----------------------------      -----------------------------
+DumpDomain                         VerifyHeap
+EEHeap                             DumpLog
+Name2EE                            FindAppDomain
+SyncBlk                            SaveModule
+DumpThreadConfig (dtc)             SaveAllModules (sam)
+DumpMT                             GCHandles
+DumpClass                          GCHandleLeaks
+DumpMD                             VMMap
+Token2EE                           VMStat
+EEVersion                          ProcInfo 
+DumpModule                         StopOnException (soe)
+ThreadPool                         MinidumpMode 
+DumpHttpRuntime                    FindDebugTrue
+DumpIL                             FindDebugModules
+PrintDateTime                      Analysis
+DumpDataTables                     CLRUsage
+DumpAssembly                       CheckCurrentException (cce)
+RCWCleanupList                     CurrentExceptionName (cen)
+PrintIPAddress                     VerifyObj
+DumpHttpContext                    HeapStat
+ASPXPages                          GCWhere
+DumpASPNETCache (dac)              ListNearObj (lno)
+DumpSig
+DumpMethodSig                      Other
+DumpRuntimeTypes                   -----------------------------
+ConvertVTDateToDate (cvtdd)        FAQ
+ConvertTicksToDate (ctd)
+DumpRequestTable
+DumpHistoryTable
+DumpBuckets
+GetWorkItems
+DumpXmlDocument (dxd)
+DumpCollection (dc)
+
+Examining the GC history
+-----------------------------
+HistInit
+HistStats
+HistRoot
+HistObj
+HistObjFind
+HistClear
+
+
+WinDBG Analyse
+0:000>lm --> List Modules
+0:000> .load C:\branches\DebugingTools\SOSExtensions\psscor2\x86\psscor2.dll --> Load PSSCore2 for .Net 3.5
+0:000> .load C:\Code\debuggingtools\SOSExtensions\psscor4\x86\x86\psscor4.dll --> Load PSSCore2 for .Net 4.0
+0:000> .load C:\Code\debuggingtools\SOSExtensions\psscor4\amd64\amd64\psscor4.dll --> Load PSSCore2 for .Net 4.0
+0:000> !help --> Validate Psscore2 is loaded
+0:000> .loadby sos.dll mscorwks --> load by clr
+0:000> !sosexhelp --> Sosex help
+0:000> .cls --> Clear the screen
+0:000> .symfix
+0:000> .reload /f
+.cordll –lp c:\x\y\z -->tell the debuggers the exact location where to load mscordacwks.dllfrom
+!sym noisy 
+
+Symbol Path
+SRV*C:\symbols*http://msdl.microsoft.com/download/symbols
+.sympath C:\Clients\DNA;srv*c:\symbols*https://msdl.microsoft.com/download/symbols
+C:\Program Files (x86)\Allscripts Healthcare Solutions\Touchworks Web\Touchworks Print Center\;SRV*C:\symbols*http://msdl.microsoft.com/download/symbols
+.sympath c:\adndbin --> Add symbole file path
+C:\temp\TWCSSSpooler.exe;SRV*C:\symbols*http://msdl.microsoft.com/download/symbols
+symchk /v c:\sym\MyApp.exe /s c:\sym -->Verify PDB file
+sxe ld mscorwks.dll -->break as soon as module is loaded
+.cmdtree C:\branches\DebugingTools\SOS-CMDTREE.TXT
+.cordll -ve -u -l --> cordll command controls the way in which mscordacwks.dllis loaded
+.exepath+ c:\windows\microsoft.net\framework\v2.0.50727 --> The executable path can be controlled in the debugger using the exepathcommand
+
+-- Framework 4.0
+.load C:\Windows\Microsoft.NET\Framework\v2.0.50727\sos.dll
+.load C:\Windows\Microsoft.NET\Framework\v4.0.30319\sos.dll
+.loadby sos clr
+.load C:\branches\DebugingTools\SOSExtensions\sosex_32\sosex.dll
+
+--DumpDomain
+!dumpdomain 0050c330
+
+--Print Agruments
+!clrstack -a --> paramerters and locals
+!clrStack -l -> shows local variables
+!ClrStack -p -> Shows the agruments
+~* kb 2000 -> native stacks
+~*e!ClrStack -> Displays all the manage thread callstack
+!EEStack  --> Displays all thread callstack
+~0s		-> Switch thread
+~		-> Displays all the threads
+kP		-> Native callstack
+
+--To detect deadlocks
+!dlk 
+
+--Print Local variable info
+!do <localaddresss>
+
+--Print Method descriptors
+!dumpMT -md <methodTable Address>
+
+--DumpHeap
+!DumpHeap
+!DumpHeap -type System.Diagnostics.Process
+!DumpHeap -type Allscripts.IHE.Transform
+!dumpheap -stat
+.foreach(myVariable {!dumpheap -type System.Byte[] -min 6500 -short}){!do myVariable;.echo *************}
+.foreach(myVariable {!dumpheap -type System.Byte[] -min 6500 -short}){!do myVariable;.echo *************}
+
+--Writedump
+.writemem C:\IconEncounterFormSubmitted.png 0cc71370 L0n1387008 -->When range is small
+.writemem C:\IconEncounterFormSubmitted.png 0cc71370 L?0x152A00 -->when range is big
+!TraverseHeap -xml C:\TrvHeap.xml
+!savemodule --> Convert IP to MethodData(!IP2MD 772570b4). !SaveModule 5eb41000 C:\Users\LabUser\Desktop\t.dll
+!runaway --> Which thread is taking how many time
+!SAM --> save all modules
+
+qd -> deteach a process
+.hh -> Help
+lm v m all* -->Check assembly version
+.reload /f -->Force load all symbols
+lm e -->Check sysbols
+.formats 0xdead --> format numbers
+.logopen c:\temp\windbg.log -->Write everything is log file
+.logfile --> Verify log file
+.dump /ma /u c:\temp\test.dmp -->Take dump
+!analyze -v -->Analyse common problem
+.prefer_dml 1  -> Turn DML for all commands by default
+.chain ->
+
+SOSEX comments
+!mk --> Full callstack including managed and native
+!mdso --> Get all object of current threads stack
+!!mdt 02799464 --> Get all objects and value of current object
+!EEHeap -gc --> Get all the heaps
+!dumpgen 2 --> Get gen 2 from all the heaps
+!dumpgen 3 --> Get all the LOH 
+!GCRoot 0266e550 --> Where the objects are rooted. It needs an address which is optained by !dumpheap -type Allscripts
+!refs 0266e550 --> !GCRoot doesn't show static fields. It is better to use refs from Sosex
+!SOE --> Stop on exception. Only used for live debugging
+!DLK --> Detact deadload automatically
+.load sosex.dll --> Load sosex
+!bpsc 02typesample.cs 34 --> Put brackpoint on line34
+
+HTTP calls
+!ASPXPages --> Get all requests
+!FindDebugTrue --> Checks debug flag in all process
+!DumpHttpContext --> Same as ASPXPages but can now use to dump object : !do 0x01dc4334
+
+
+
+--tips
+enable CLR exception -->Break on CLR exception during live debuging
+.echo WOW;kP;.echo Love this -->CLR exception command
+
+--Dumps on crash
+procdump -ma -i c:\dumps
+
+--Remove
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug
+
+
+http://windbg.info/doc/1-common-cmds.html#15_call_stack
+
+--Installation
+https://msdn.microsoft.com/library/windows/hardware/ff551063(v=vs.85).aspx

@@ -1,0 +1,79 @@
+--Run executable as 32Bit
+CorFlags /32BIT+ application.exe
+
+--Disable DEP by using the command below and then rebooting
+bcdedit /set nx AlwaysOff 
+Ref : TFS#150120
+
+
+--Delete assembly cache
+Delete all the folders under LocalMachine\Users\AppData\Local\assembly.
+
+--Increase GDI
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows\GDIProcessHandleQuota
+The value defaults to 10,000 but the value can range from 256 to 65536
+
+runas /noprofile /user:USFPG\ahstech Notepad
+
+nslookup
+
+--System Information
+msinfo32.exe 
+
+--Assembly download location
+C:\Users\agoenka\AppData\Local\assembly
+
+--Use largespace in 64Bit System
+c:\(...)\Vc7\bin> editbin.exe /LARGEADDRESSAWARE \Path\To\The\Program.exe
+
+--Afterwards this bit can be checked with the dumpbin.exe utility:
+c:\(...)\Vc7\bin> dumpbin.exe /headers \Path\To\The\Program.exe
+
+
+--symbole Server
+SRV*c:\symbols*http://msdl.microsoft.com/download/symbols
+
+--Memory
+http://msdn.microsoft.com/en-us/library/aa366778.aspx
+
+--Associates a path with a drive letter. Used without parameters, subst displays the names of the virtual drives in effect. 
+subst z: b:\user\betty\forms 
+
+--Boot remote pc
+psshutdown  \\10.143.102.177 -r -u administrator -p Allscripts#1
+psshutdown  \\10.106.38.63 -r -u administrator -p Allscripts#R1
+Logoff : psshutdown  \\10.106.38.176 -o -u administrator -p Allscripts#R1
+
+--CED
+TW_CSS_WORKER /APPGRP=AHSCED:TouchWorks /JOBTYPE=CED /JOBID=7588209 /JOBPROP=0 /APP=PM /MODEMID=0
+TW_CSS_WORKER /APPGRP=AHSMSG1A:TouchWorks /JOBTYPE=HTTP /JOBID=5968657 /JOBPROP=0 /APP=PM /MODEMID=0
+TW_CSS_WORKER /APPGRP=AHSPrint1A:TouchWorks /JOBTYPE=HTTP /JOBID=5795711 /JOBPROP=0 /APP=PM /MODEMID=0
+TW_CSS_WORKER /APPGRP=ehrweb04:TouchWorks /JOBTYPE=HTTP /JOBID=7800728 /JOBPROP=0 /APP=PM /MODEMID=0
+
+--Unzip MSI
+msiexec /a PathToMSIFile /qb TARGETDIR=DirectoryToExtractTo
+msiexec /a CrystalRuntime.msi /qb TARGETDIR="C:\branches\11.4.1\Build\BIN\Crystal10Runtime\a"
+
+--Select all events in the Security Event Log where the string "AUser" is present as data anywhere in the EventData section
+*[EventData[Data and  (Data="C:\Program Files (x86)\Allscripts Healthcare Solutions\Touchworks Web\Touchworks Print Center\Applications.CSSWorkerDotNet.exe")]]
+
+--Set path
+SET PATH=%PATH%;C:\Program Files (x86)\Microsoft Visual Studio 11.0\Common7\IDE
+
+--See GAC
+1. In console, type "cd /d c:\Windows\assembly
+2. Type: "attrib -r -h -s desktop.ini"
+3. Type "ren desktop.ini desktop.bak"
+
+--2012 TFS
+http://alm-prod-app1.rd.allscripts.com:8080/tfs
+
+--Process
+cd C:\branches\DebugingTools\SysinternalsSuite
+pslist.exe \\10.106.38.176 -u 10.106.38.176\administrator -p Allscripts#1
+pskill.exe \\10.106.38.176 -u 10.106.38.176\administrator -p Allscripts#1 -t 7364
+
+--SET debug sysmbols environment variable
+use sysdm.cpl command and set %_NT_SYMBOL_PATH%
+_NT_SYMBOL_PATH
+srv*c:\symbols*http://msdl.microsoft.com/download/symbols

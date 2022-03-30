@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Silverlight_Charts.Views.PieChart"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:charting="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+    xmlns:datavis="clr-namespace:System.Windows.Controls.DataVisualization;assembly=System.Windows.Controls.DataVisualization.Toolkit"
+    xmlns:viewmodel="clr-namespace:Silverlight_Charts.ViewModels"             
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400"
+    Tag="Order Count">
+
+    <UserControl.Resources>
+        <viewmodel:PieChartViewModel  x:Key="MyPieChartViewModel" />
+    </UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+
+        <charting:Chart Title="Order Count by Month (2004)" Height="400" BorderThickness="0" >
+            <charting:Chart.Series>
+                <charting:PieSeries 
+                    Title="Order Count"
+                    ItemsSource="{Binding ChartData, Source={StaticResource MyPieChartViewModel}}"
+                    IndependentValueBinding="{Binding MonthName}"
+                    DependentValueBinding="{Binding OrderCount}"/>
+            </charting:Chart.Series>
+        </charting:Chart>
+
+    </Grid>
+</UserControl>

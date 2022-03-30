@@ -1,0 +1,102 @@
+﻿<navigation:Page x:Class="Silverlight_Patterns_in_Action.Views.Home" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="900" d:DesignHeight="580"
+           Title="Silverlight Patterns in Action 4.0">
+    
+    <Grid x:Name="LayoutRoot">
+        
+        <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}" >
+
+            <StackPanel x:Name="ContentStackPanel" Style="{StaticResource ContentStackPanelStyle}">
+
+                <StackPanel Width="800" HorizontalAlignment="Center" Margin="0,0,0,50">
+
+                    <TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" 
+                           Text="Welcome" Padding="0,0,0,30"/>
+
+                    <StackPanel Orientation="Horizontal" Width="800">
+                        <TextBlock FontSize="12" Foreground="#444444"  TextWrapping="Wrap" Width="560" HorizontalAlignment="Left" >
+                            <LineBreak />
+                        <Run FontWeight="Bold">Introduction</Run>
+                        <LineBreak /><LineBreak />
+                            Thank you for using the Design Pattern Framework 4.0. 
+                            You are currently running <Run Foreground="DarkBlue" FontWeight="Bold">Silverlight Patterns in Action 4.0</Run> which demonstrates 
+                            when, where, and how design patterns are used in a modern Silverlight line-of-business application.
+                        <LineBreak /><LineBreak />
+                            This application has been built around the most frequently used Silverlight design patterns 
+                            and best practices. For example, when exploring the code and associated documentation you will 
+                            discover the critical role of the MVVM (Model View ViewModel) design pattern in this application. 
+                            Binding, Commanding, and VisualStateManager patterns are deeply embedded within the MVVM model as well.
+                            MEF (Managed Extensibility Framework) demonstrates the building of composable Silverlight applications.
+                        <LineBreak /><LineBreak />                            
+                            The Silverlight client communicates with the back-end via WCF RIA Services using the Entity Framework.
+                            This technology stack allows you to rapidly build visually attractive, robust data solutions; 
+                            it also provides end-to-end support (from client to server) for common tasks, such as data validation 
+                            and user authentication. 
+                        </TextBlock>
+                        
+                        <Image Name="ImageClouds"  Width="194" Height="282" Margin="40,20,0,0" Opacity="1" VerticalAlignment="Top" ></Image>
+
+                    </StackPanel>
+                    
+                    <TextBlock FontSize="12" Foreground="#444444"  TextWrapping="Wrap" >
+                        
+                        <LineBreak /><LineBreak />
+                        <Run FontWeight="Bold">Getting Started</Run>
+                        <LineBreak /><LineBreak />
+
+                        As a first step, we recommend that you familiarize yourself with the functionality of this application. 
+                        Select the menu items along the top and explore the different options. 
+                        <LineBreak /><LineBreak />
+                        
+                        You are currently viewing the Home page. The Shopping and Search menu items allow shoppers to browse or search
+                        for electronic products.  Products are then added to a shopping cart which is managed from the 
+                        Cart menu item.  Shopping cart items can be removed and quantities can be changed, as well as the 
+                        preferred shipping method. The cart is automatically saved to Isolated Storage, so the next time you come
+                        back, the system remembers what was in your cart from the previous session.
+                        <LineBreak /><LineBreak />
+                        
+                        The Administration modules (represented by the Customers, Orders, and Charts menu items) are disabled by default. 
+                        Administrators need to authenticate themselves via the Login page before these menu items are enabled. 
+                        Once in, administrators can manage customers (add, edit, delete), view orders with 
+                        two levels of master-details: customer to orders to order details, and explore the charts. 
+                        <LineBreak /><LineBreak />
+                        
+                        
+                        Once you're familiar with the UI and the functionality, we suggest you analyze the general code layout. 
+                        This includes the two main projects (named Silverlight Patterns in Action), their folders, and the different items (classes, pages, assets) within these folders.
+                        This application makes extensive use of the MVVM pattern. Each page has its own ViewModel. 
+                        Most of the client functionality is encapsulated by these ViewModel classes which is why you will 
+                        find very little code in the XAML code behind files. ViewModels communicate with their Views (i.e. pages)
+                        through Commands, Events, and Data Binding. They communicate to the Server using RIA Domain services which 
+                        have been projected (made available) from the ASP.NET web project onto the Silverlight project. 
+                        MEF (Managed Extensibility Framework) is demonstrated in two additional projects (Silverlight Charts and Silverlight Contracts).
+                        
+                        <LineBreak /><LineBreak /><LineBreak />
+                        <Run FontWeight="Bold">Where To Find Documentation </Run>
+                        <LineBreak /><LineBreak />
+                        
+                        Setup, functionality, design, architecture, and design patterns are discussed in the accompanying document named: 
+                        Silverlight Patterns 4.0.pdf. The C# source code is generously commented. 
+                        Finally, all projects in this solution come with their own class diagram located in folders named \_UML Diagram\. 
+
+                        <LineBreak /><LineBreak /><LineBreak />
+                        <Run FontWeight="Bold">A Great Learning Experience </Run>
+                        <LineBreak /><LineBreak />
+
+                        We are hopeful that the Silverlight Patterns 4.0 reference application will provide a valuable 
+                        learning experience on the use of design patterns in the real world.
+
+                    </TextBlock>
+
+                </StackPanel>
+            </StackPanel>
+
+        </ScrollViewer>
+    </Grid>
+</navigation:Page>

@@ -1,0 +1,173 @@
+﻿<navigation:Page x:Class="Silverlight_Patterns_in_Action.Views.Cart" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="640" d:DesignHeight="480"
+           Title="Your Shopping Cart" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+           xmlns:cart="clr-namespace:Silverlight_Patterns_in_Action.Code.ShoppingCart"
+           xmlns:viewmodel="clr-namespace:Silverlight_Patterns_in_Action.ViewModels"
+                 
+           viewmodel:ShoppingCartStates.VisualState="{Binding CurrentCartState}"      
+           DataContext="{StaticResource MyCartViewModel}"
+           >
+
+    <navigation:Page.Resources>
+        <cart:ShippingMethods x:Key="ShippingMethods" />
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" >
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="CommonStates">
+
+                <VisualStateGroup.Transitions>
+                    <VisualTransition From="Normal" To="Changed" 
+                                      GeneratedDuration="0:0:0.8"  />
+                </VisualStateGroup.Transitions>
+                
+                <VisualState x:Name="Changed">
+                    <Storyboard>
+                        <ColorAnimation 
+                             Storyboard.TargetName="textBlockTotal" 
+                             Storyboard.TargetProperty="(ForeGround).(SolidColorBrush.Color)"
+                             From="White" To="Red" Duration="0:0:0" >
+                        </ColorAnimation>
+                    </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Normal"/>
+                
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}" >
+
+            <StackPanel x:Name="ContentStackPanel" Style="{StaticResource ContentStackPanelStyle}">
+
+                <StackPanel Width="800" HorizontalAlignment="Center">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="110"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" 
+                           Text="{Binding Path=ApplicationStrings.CartPageTitle, Source={StaticResource ResourceWrapper}}" Padding="0,0,0,30" />
+
+                        <StackPanel Grid.Row="1" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <StackPanel>
+                                    <HyperlinkButton Content="Continue Shopping" NavigateUri="/Shopping" HorizontalAlignment="Left" Foreground="Brown" FontSize="13" />
+                                    <HyperlinkButton Content="Checkout" NavigateUri="/Checkout" HorizontalAlignment="Left" Margin="0,10,0,20"  Foreground="Brown" FontSize="13"/>
+                                </StackPanel>
+                                <Border Grid.Column="1" BorderBrush="#CCCCCC" BorderThickness="1" CornerRadius="2" Height="112" Width="112" Margin="0,0,90,20"  Padding="10" Background="White">
+                                    <Image Name="ImageProduct"  Height="90" Width="90" 
+                                        Source="{Binding CurrentItem.Id, Converter={StaticResource MyProductImageConverter}}"  />
+                                </Border>
+
+                            </Grid>
+
+
+                            <data:DataGrid AutoGenerateColumns="False" Name="dataGridCartItems" HorizontalAlignment="Left" 
+                               ItemsSource="{Binding CartItems}"
+                               SelectedItem="{Binding CurrentItem, Mode=TwoWay}" >
+                                <data:DataGrid.Columns>
+
+                                    <data:DataGridTemplateColumn Header="Quantity"  CanUserSort="True" IsReadOnly="False" SortMemberPath="Quantity" Width="80">
+                                        <data:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    <TextBox TextBox.TextAlignment="Center" Width="45" Height="21" HorizontalAlignment="Center" Margin="0,2,0,0"
+                                                             TextChanged="TextBox_TextChanged" 
+                                                             Text="{Binding Quantity, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </data:DataGridTemplateColumn.CellTemplate>
+                                    </data:DataGridTemplateColumn>
+
+
+                                    <data:DataGridTextColumn Header="Description" Binding="{Binding Name}" IsReadOnly="True" Width="270"  />
+                                    <data:DataGridTextColumn Header="Unit Price" Binding="{Binding UnitPrice, StringFormat='c' }" IsReadOnly="True" Width="130"  />
+                                    <data:DataGridTextColumn Header="Price" Binding="{Binding Price, StringFormat='c' }" IsReadOnly="True" Width="130"  />
+
+                                    <data:DataGridTemplateColumn Width="80" >
+                                        <data:DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <StackPanel>
+                                                    <Button Content="Remove" Width="80" 
+                                                            Command="{Binding Source={StaticResource MyCartViewModel}, 
+                                                                              Path=RemoveCommand}" 
+                                                                              CommandParameter="{Binding}">
+                                                    </Button>
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </data:DataGridTemplateColumn.CellTemplate>
+                                    </data:DataGridTemplateColumn>
+                                </data:DataGrid.Columns>
+
+                            </data:DataGrid>
+
+                            <Grid Height="211" Name="grid1"  HorizontalAlignment="Left" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="44"></RowDefinition>
+                                    <RowDefinition Height="36"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="60"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="180"></ColumnDefinition>
+                                    <ColumnDefinition Width="73"></ColumnDefinition>
+                                    <ColumnDefinition Width="119"></ColumnDefinition>
+                                    <ColumnDefinition Width="112"></ColumnDefinition>
+                                    <ColumnDefinition Width="130" />
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Grid.Row="1" Grid.Column="1" Text="Ship By:" Margin="3" FontWeight="Bold" FontSize="12" />
+                                <ComboBox  Name="comboBoxShipping" Grid.Column="2" Grid.Row="1" Height="23" HorizontalAlignment="Left" 
+                               VerticalAlignment="Top" Width="100"  
+                               ItemsSource="{Binding Source={StaticResource ShippingMethods}, Path=List}" 
+                               
+                                SelectedValue="{Binding Source={StaticResource MyCartViewModel}, Path=ShippingId, Mode=TwoWay}" 
+                                SelectedValuePath="ShippingId"
+                                DisplayMemberPath="ShippingName" />
+
+
+                                <TextBlock Grid.Column="3" Height="23" HorizontalAlignment="Left" Margin="32,17,0,0" Name="textBlock1" Text="Subtotal:" FontSize="12" FontWeight="Bold" VerticalAlignment="Top" Width="71" />
+                                <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,4,0,0" Name="textBlock2" Text="Shipping:"  FontWeight="Bold" FontSize="12" VerticalAlignment="Top" Width="71" Grid.Column="3" Grid.Row="1" />
+                                <TextBlock Height="23" HorizontalAlignment="Left" Margin="32,0,0,0" Name="textBlock3" Text="Total:" FontWeight="Bold" FontSize="12" VerticalAlignment="Top" Width="71" Grid.Column="3" Grid.Row="2" />
+                                <TextBlock Height="23" HorizontalAlignment="Left" Margin="0,17,0,0" Name="textBlock4" Text="{Binding SubTotal, StringFormat='c'}" VerticalAlignment="Top" Width="71" Grid.Column="4" />
+                                <TextBlock Height="23" HorizontalAlignment="Left" Margin="0,4,0,0" Name="textBlock5" Text="{Binding Shipping, StringFormat='c'}" VerticalAlignment="Top" Width="71" Grid.Column="4" Grid.Row="1" />
+                                <TextBlock Height="23" HorizontalAlignment="Left" Name="textBlockTotal" Text="{Binding Total, StringFormat='c'}" VerticalAlignment="Top" Width="71" Grid.Column="4" Grid.Row="2" Foreground="Red" TextDecorations="Underline" />
+
+
+
+                                <HyperlinkButton Grid.Row="3" Grid.Column="4" Content="Checkout >" NavigateUri="/Checkout" HorizontalAlignment="Right" Margin="0,20,0,20"  Foreground="Brown" FontSize="15" VerticalAlignment="Bottom" />
+
+                            </Grid>
+
+
+
+                        </StackPanel>
+                    </Grid>
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</navigation:Page>

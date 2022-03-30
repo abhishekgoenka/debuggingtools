@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMasterPage.Master.cs" Inherits="ASPNETWebApplication.SiteMasterPage" %>
+<%@ Register TagPrefix="do" Namespace="ASPNETWebApplication.Controls" Assembly="ASPNETWebApplication" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Master Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="patterns-in-action">
+  <div id="container">
+    <form id="form1" runat="server">
+    
+    <%-- Header --%>
+        
+    <div id="header">
+        <div id="logo">
+           <asp:HyperLink ID="HyperLinkLogo" Runat="Server" ImageUrl="~/assets/images/app/logoblue.jpg" NavigateUrl="~/"></asp:HyperLink>
+        </div>
+        <span>Patterns in Action<font size="3" style="padding:0 0 0 30px;">- &nbsp;ASP.NET Web Forms</font></span> 
+    </div>
+    
+    <%-- Subheader --%>
+    
+    <div id="subheader">
+        <div id="subheader-left"></div>
+        <div id="subheader-right">
+            <asp:Image ID="ImageArrow" runat="Server" ImageUrl="~/assets/images/app/arrow.gif" />
+            <span><asp:SiteMapPath ID="SiteMapPathMain" runat="Server" PathSeparator="&nbsp;&gt;&nbsp;" ></asp:SiteMapPath></span>
+        </div>
+    </div>
+    <div style="height:4px;background:#6666ff;"></div>
+       
+    <%-- Body --%>
+    
+    <div id="main-body">
+        
+        <%-- Menu --%>
+        
+        <table border="0" cellpadding="0" cellspacing="0">
+         <tr>
+          <td valign="top" align="left">
+
+            <div id="menu">
+            <do:MenuComposite ID="TheMenuComposite" runat="Server"></do:MenuComposite>
+           
+		        
+               <div id="performance"> 
+                 <% =PageRenderTime %>
+               </div>
+
+            </div> 
+          </td>
+          <td valign="top" align="left">
+
+        
+          <%-- Ajax Script Manager --%>
+
+         <asp:ScriptManager ID="ScriptManager1" runat="server">
+         </asp:ScriptManager>
+      
+           <%-- Ajax Update Progess Panel --%>
+        
+          <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="100" >
+           <ProgressTemplate>
+             <div class="updateprogress">
+               <asp:Image ID="ImageProgress" runat="server" ImageUrl="~/assets/images/app/indicator.gif" ImageAlign="AbsMiddle" />&nbsp;&nbsp;&nbsp;Processing...
+              </div>
+           </ProgressTemplate>
+          </asp:UpdateProgress>  
+        
+          <%-- Content --%>
+          
+          
+           <div id="content">
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             </asp:ContentPlaceHolder>
+           </div>
+         
+          </td>
+         </tr>
+        </table>
+               
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+

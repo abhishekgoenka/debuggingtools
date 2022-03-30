@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DataObjects.AdoNet.Access.AccessCustomerDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAECAQAAAAAABAAAAAAAAAAAAAEAAAEABAIBAAA=</HashCode>
+      <FileName>ADO.NET\Access\AccessCustomerDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Access.AccessProductDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAEACAIAAAA=</HashCode>
+      <FileName>ADO.NET\Access\AccessProductDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Access.AccessDaoFactory" Collapsed="true">
+    <Position X="12" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQAAAAAAAAAAAAAAIBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ADO.NET\Access\AccessDaoFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Access.AccessOrderDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAIAEAA=</HashCode>
+      <FileName>ADO.NET\Access\AccessOrderDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Oracle.OracleCustomerDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAAAAAABAAAAAAAAAAAAAEAAAAABAABAAA=</HashCode>
+      <FileName>ADO.NET\Oracle\OracleCustomerDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Oracle.OracleProductDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQIAAAAAAQAEAAAAAAAACAAQAAA=</HashCode>
+      <FileName>ADO.NET\Oracle\OracleProductDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Oracle.OracleDaoFactory" Collapsed="true">
+    <Position X="9.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQAAAAAAAAAAAAAAIBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ADO.NET\Oracle\OracleDaoFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Oracle.OracleOrderDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.75" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAABAAAAAAIAAAAAGAAAAAAAAAAQAAAAEAEAA=</HashCode>
+      <FileName>ADO.NET\Oracle\OracleOrderDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.SqlServer.SqlServerCustomerDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAECAQAAAAAABAAAAAAAAAAAAAEAAAEABAIBAAA=</HashCode>
+      <FileName>ADO.NET\SqlServer\SqlServerCustomerDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.SqlServer.SqlServerProductDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAEACAIAAAA=</HashCode>
+      <FileName>ADO.NET\SqlServer\SqlServerProductDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.SqlServer.SqlServerDaoFactory" Collapsed="true">
+    <Position X="7.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQAAAAAAAAAAAAAAIBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>ADO.NET\SqlServer\SqlServerDaoFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.SqlServer.SqlServerOrderDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAEAAAIAEAA=</HashCode>
+      <FileName>ADO.NET\SqlServer\SqlServerOrderDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Db" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAAEAAACAgAAgAAAAAAAAgAAGAQAABAAAAAAAACAA=</HashCode>
+      <FileName>ADO.NET\Db.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.DaoFactories" Collapsed="true">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DaoFactories.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.DataAccess" Collapsed="true">
+    <Position X="0.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAACAwAAAAAAAAAAAAAAIBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.LinqToSql.Implementation.LinqCategoryDao" Collapsed="true">
+    <Position X="3" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinqtoSql\Implementation\LinqCategoryDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.LinqToSql.Implementation.LinqCustomerDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAAAAAABAAAAAAAAAAAAAEAAAAABAABAAA=</HashCode>
+      <FileName>LinqtoSql\Implementation\LinqCustomerDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.LinqToSql.Implementation.LinqDaoFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQAAAAAAAAAAAAAAIBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>LinqtoSql\Implementation\LinqDaoFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.LinqToSql.Implementation.LinqOrderDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>LinqtoSql\Implementation\LinqOrderDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.LinqToSql.Implementation.LinqOrderDetailDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinqtoSql\Implementation\LinqOrderDetailDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DataObjects.LinqToSql.Implementation.LinqProductDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>LinqtoSql\Implementation\LinqProductDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.LinqToSql.ModelMapper.Mapper" Collapsed="true">
+    <Position X="3" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinqtoSql\ModelMapper\Mapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.LinqToSql.DataContextFactory" Collapsed="true">
+    <Position X="3" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAIAAAAAACAAAA=</HashCode>
+      <FileName>LinqtoSql\DataContextFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.LinqToSql.VersionConverter" Collapsed="true">
+    <Position X="3" Y="10.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LinqtoSql\VersionConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Linq.Dynamic.DynamicQueryable" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>IIAAAACAAAAAAAAAAAAAAAQAAAEAAAAAAAEAQAAAEAA=</HashCode>
+      <FileName>Shared\DynamicLinq.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.AdoNet.Access.AccessCategoryDao" Collapsed="true">
+    <Position X="12" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>ADO.NET\Access\AccessCategoryDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Access.AccessOrderDetailDao" Collapsed="true">
+    <Position X="12" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>ADO.NET\Access\AccessOrderDetailDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Oracle.OracleCategoryDao" Collapsed="true">
+    <Position X="9.75" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ADO.NET\Oracle\OracleCategoryDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.Oracle.OracleOrderDetailDao" Collapsed="true">
+    <Position X="9.75" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ADO.NET\Oracle\OracleOrderDetailDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.SqlServer.SqlServerCategoryDao" Collapsed="true">
+    <Position X="7.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>ADO.NET\SqlServer\SqlServerCategoryDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.AdoNet.SqlServer.SqlServerOrderDetailDao" Collapsed="true">
+    <Position X="7.5" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAEAAAIAAAA=</HashCode>
+      <FileName>ADO.NET\SqlServer\SqlServerOrderDetailDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.EntityFramework.Implementation.EntityCategoryDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityFramework\Implementation\EntityCategoryDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.EntityFramework.Implementation.EntityProductDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>EntityFramework\Implementation\EntityProductDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.EntityFramework.Implementation.EntityOrderDetailDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityFramework\Implementation\EntityOrderDetailDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.EntityFramework.Implementation.EntityOrderDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="7" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>EntityFramework\Implementation\EntityOrderDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.EntityFramework.Implementation.EntityDaoFactory" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQAAAAAAAAAAAAAAIBAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>EntityFramework\Implementation\EntityDoaFactory.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.EntityFramework.Implementation.EntityCustomerDao" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.25" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAAAAAABAAAAAAAAAAAAAEAAAAABAABAAA=</HashCode>
+      <FileName>EntityFramework\Implementation\EntityCustomerDao.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DataObjects.EntityFramework.ModelMapper.Mapper" Collapsed="true">
+    <Position X="5.25" Y="9.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EntityFramework\ModelMapper\Mapper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.EntityFramework.DataObjectFactory" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAACAAAA=</HashCode>
+      <FileName>EntityFramework\DataObjectFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataObjects.Extensions" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AIgAAAAAAAAgBAgAAAAAIAAABAAAEAABEBAAAAAAAAg=</HashCode>
+      <FileName>Shared\Extensions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DataObjects.IProductDao" Collapsed="true">
+    <Position X="0.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>IProductDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DataObjects.ICustomerDao" Collapsed="true">
+    <Position X="0.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAQAAAAAABAAAAAAAAAAAAAEAAAAABAABAAA=</HashCode>
+      <FileName>ICustomerDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DataObjects.IOrderDao" Collapsed="true">
+    <Position X="0.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>IOrderDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DataObjects.ICategoryDao" Collapsed="true">
+    <Position X="0.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICategoryDao.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DataObjects.IOrderDetailDao" Collapsed="true">
+    <Position X="0.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IOrderDetailDoa.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

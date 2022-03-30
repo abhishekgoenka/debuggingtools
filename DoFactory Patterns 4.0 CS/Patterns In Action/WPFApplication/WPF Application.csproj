@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{051BDAAB-6AB7-4D12-A4CC-A723280281CD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WPFApplication</RootNamespace>
+    <AssemblyName>WPFApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework.Aero">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="WindowAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowCustomer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WindowOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\ActionCommands.cs" />
+    <Compile Include="Controls\DropDownButton.cs" />
+    <Compile Include="Converters\CustomerImageConverter.cs" />
+    <Compile Include="Converters\MaxLengthConverter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="WindowAbout.xaml.cs">
+      <DependentUpon>WindowAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowCustomer.xaml.cs">
+      <DependentUpon>WindowCustomer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowLogin.xaml.cs">
+      <DependentUpon>WindowLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowMain.xaml.cs">
+      <DependentUpon>WindowMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowOrders.xaml.cs">
+      <DependentUpon>WindowOrders.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="_UML Diagram\ClassDiagram.cd" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WPFModel\WPF Model.csproj">
+      <Project>{B8F7CC54-E356-4D11-B2D7-F72DE478F148}</Project>
+      <Name>WPF Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WPFViewModel\WPF ViewModel.csproj">
+      <Project>{8DD41B96-C538-4647-868D-CAEE10DE79E7}</Project>
+      <Name>WPF ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Menus\View.png" />
+    <Resource Include="Images\Menus\Copy.png" />
+    <Resource Include="Images\Menus\Cut.png" />
+    <Resource Include="Images\Menus\Delete.png" />
+    <Resource Include="Images\Menus\Edit.png" />
+    <Resource Include="Images\Menus\Help.png" />
+    <Resource Include="Images\Menus\Logout.png" />
+    <Resource Include="Images\Menus\Login.png" />
+    <Resource Include="Images\Menus\Add.png" />
+    <Resource Include="Images\Menus\Paste.png" />
+    <Resource Include="Images\WPFIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Customers\Large\0.jpg" />
+    <Resource Include="Images\Customers\Large\1.jpg" />
+    <Resource Include="Images\Customers\Large\10.jpg" />
+    <Resource Include="Images\Customers\Large\11.jpg" />
+    <Resource Include="Images\Customers\Large\12.jpg" />
+    <Resource Include="Images\Customers\Large\13.jpg" />
+    <Resource Include="Images\Customers\Large\14.jpg" />
+    <Resource Include="Images\Customers\Large\15.jpg" />
+    <Resource Include="Images\Customers\Large\16.jpg" />
+    <Resource Include="Images\Customers\Large\17.jpg" />
+    <Resource Include="Images\Customers\Large\18.jpg" />
+    <Resource Include="Images\Customers\Large\19.jpg" />
+    <Resource Include="Images\Customers\Large\2.jpg" />
+    <Resource Include="Images\Customers\Large\20.jpg" />
+    <Resource Include="Images\Customers\Large\21.jpg" />
+    <Resource Include="Images\Customers\Large\22.jpg" />
+    <Resource Include="Images\Customers\Large\23.jpg" />
+    <Resource Include="Images\Customers\Large\24.jpg" />
+    <Resource Include="Images\Customers\Large\25.jpg" />
+    <Resource Include="Images\Customers\Large\26.jpg" />
+    <Resource Include="Images\Customers\Large\27.jpg" />
+    <Resource Include="Images\Customers\Large\28.jpg" />
+    <Resource Include="Images\Customers\Large\29.jpg" />
+    <Resource Include="Images\Customers\Large\3.jpg" />
+    <Resource Include="Images\Customers\Large\30.jpg" />
+    <Resource Include="Images\Customers\Large\31.jpg" />
+    <Resource Include="Images\Customers\Large\32.jpg" />
+    <Resource Include="Images\Customers\Large\33.jpg" />
+    <Resource Include="Images\Customers\Large\34.jpg" />
+    <Resource Include="Images\Customers\Large\35.jpg" />
+    <Resource Include="Images\Customers\Large\36.jpg" />
+    <Resource Include="Images\Customers\Large\37.jpg" />
+    <Resource Include="Images\Customers\Large\38.jpg" />
+    <Resource Include="Images\Customers\Large\39.jpg" />
+    <Resource Include="Images\Customers\Large\4.jpg" />
+    <Resource Include="Images\Customers\Large\40.jpg" />
+    <Resource Include="Images\Customers\Large\41.jpg" />
+    <Resource Include="Images\Customers\Large\42.jpg" />
+    <Resource Include="Images\Customers\Large\43.jpg" />
+    <Resource Include="Images\Customers\Large\44.jpg" />
+    <Resource Include="Images\Customers\Large\45.jpg" />
+    <Resource Include="Images\Customers\Large\46.jpg" />
+    <Resource Include="Images\Customers\Large\47.jpg" />
+    <Resource Include="Images\Customers\Large\48.jpg" />
+    <Resource Include="Images\Customers\Large\49.jpg" />
+    <Resource Include="Images\Customers\Large\5.jpg" />
+    <Resource Include="Images\Customers\Large\50.jpg" />
+    <Resource Include="Images\Customers\Large\51.jpg" />
+    <Resource Include="Images\Customers\Large\52.jpg" />
+    <Resource Include="Images\Customers\Large\53.jpg" />
+    <Resource Include="Images\Customers\Large\54.jpg" />
+    <Resource Include="Images\Customers\Large\55.jpg" />
+    <Resource Include="Images\Customers\Large\56.jpg" />
+    <Resource Include="Images\Customers\Large\57.jpg" />
+    <Resource Include="Images\Customers\Large\58.jpg" />
+    <Resource Include="Images\Customers\Large\59.jpg" />
+    <Resource Include="Images\Customers\Large\6.jpg" />
+    <Resource Include="Images\Customers\Large\60.jpg" />
+    <Resource Include="Images\Customers\Large\61.jpg" />
+    <Resource Include="Images\Customers\Large\62.jpg" />
+    <Resource Include="Images\Customers\Large\63.jpg" />
+    <Resource Include="Images\Customers\Large\64.jpg" />
+    <Resource Include="Images\Customers\Large\65.jpg" />
+    <Resource Include="Images\Customers\Large\66.jpg" />
+    <Resource Include="Images\Customers\Large\67.jpg" />
+    <Resource Include="Images\Customers\Large\68.jpg" />
+    <Resource Include="Images\Customers\Large\69.jpg" />
+    <Resource Include="Images\Customers\Large\7.jpg" />
+    <Resource Include="Images\Customers\Large\70.jpg" />
+    <Resource Include="Images\Customers\Large\71.jpg" />
+    <Resource Include="Images\Customers\Large\72.jpg" />
+    <Resource Include="Images\Customers\Large\73.jpg" />
+    <Resource Include="Images\Customers\Large\74.jpg" />
+    <Resource Include="Images\Customers\Large\75.jpg" />
+    <Resource Include="Images\Customers\Large\76.jpg" />
+    <Resource Include="Images\Customers\Large\77.jpg" />
+    <Resource Include="Images\Customers\Large\78.jpg" />
+    <Resource Include="Images\Customers\Large\79.jpg" />
+    <Resource Include="Images\Customers\Large\8.jpg" />
+    <Resource Include="Images\Customers\Large\80.jpg" />
+    <Resource Include="Images\Customers\Large\81.jpg" />
+    <Resource Include="Images\Customers\Large\82.jpg" />
+    <Resource Include="Images\Customers\Large\83.jpg" />
+    <Resource Include="Images\Customers\Large\84.jpg" />
+    <Resource Include="Images\Customers\Large\85.jpg" />
+    <Resource Include="Images\Customers\Large\86.jpg" />
+    <Resource Include="Images\Customers\Large\87.jpg" />
+    <Resource Include="Images\Customers\Large\88.jpg" />
+    <Resource Include="Images\Customers\Large\89.jpg" />
+    <Resource Include="Images\Customers\Large\9.jpg" />
+    <Resource Include="Images\Customers\Large\90.jpg" />
+    <Resource Include="Images\Customers\Large\91.jpg" />
+    <Resource Include="Images\Customers\Large\anon.jpg" />
+    <Resource Include="Images\Customers\Small\0.jpg" />
+    <Resource Include="Images\Customers\Small\1.jpg" />
+    <Resource Include="Images\Customers\Small\10.jpg" />
+    <Resource Include="Images\Customers\Small\11.jpg" />
+    <Resource Include="Images\Customers\Small\12.jpg" />
+    <Resource Include="Images\Customers\Small\13.jpg" />
+    <Resource Include="Images\Customers\Small\14.jpg" />
+    <Resource Include="Images\Customers\Small\15.jpg" />
+    <Resource Include="Images\Customers\Small\16.jpg" />
+    <Resource Include="Images\Customers\Small\17.jpg" />
+    <Resource Include="Images\Customers\Small\18.jpg" />
+    <Resource Include="Images\Customers\Small\19.jpg" />
+    <Resource Include="Images\Customers\Small\2.jpg" />
+    <Resource Include="Images\Customers\Small\20.jpg" />
+    <Resource Include="Images\Customers\Small\21.jpg" />
+    <Resource Include="Images\Customers\Small\22.jpg" />
+    <Resource Include="Images\Customers\Small\23.jpg" />
+    <Resource Include="Images\Customers\Small\24.jpg" />
+    <Resource Include="Images\Customers\Small\25.jpg" />
+    <Resource Include="Images\Customers\Small\26.jpg" />
+    <Resource Include="Images\Customers\Small\27.jpg" />
+    <Resource Include="Images\Customers\Small\28.jpg" />
+    <Resource Include="Images\Customers\Small\29.jpg" />
+    <Resource Include="Images\Customers\Small\3.jpg" />
+    <Resource Include="Images\Customers\Small\30.jpg" />
+    <Resource Include="Images\Customers\Small\31.jpg" />
+    <Resource Include="Images\Customers\Small\32.jpg" />
+    <Resource Include="Images\Customers\Small\33.jpg" />
+    <Resource Include="Images\Customers\Small\34.jpg" />
+    <Resource Include="Images\Customers\Small\35.jpg" />
+    <Resource Include="Images\Customers\Small\36.jpg" />
+    <Resource Include="Images\Customers\Small\37.jpg" />
+    <Resource Include="Images\Customers\Small\38.jpg" />
+    <Resource Include="Images\Customers\Small\39.jpg" />
+    <Resource Include="Images\Customers\Small\4.jpg" />
+    <Resource Include="Images\Customers\Small\40.jpg" />
+    <Resource Include="Images\Customers\Small\41.jpg" />
+    <Resource Include="Images\Customers\Small\42.jpg" />
+    <Resource Include="Images\Customers\Small\43.jpg" />
+    <Resource Include="Images\Customers\Small\44.jpg" />
+    <Resource Include="Images\Customers\Small\45.jpg" />
+    <Resource Include="Images\Customers\Small\46.jpg" />
+    <Resource Include="Images\Customers\Small\47.jpg" />
+    <Resource Include="Images\Customers\Small\48.jpg" />
+    <Resource Include="Images\Customers\Small\49.jpg" />
+    <Resource Include="Images\Customers\Small\5.jpg" />
+    <Resource Include="Images\Customers\Small\50.jpg" />
+    <Resource Include="Images\Customers\Small\51.jpg" />
+    <Resource Include="Images\Customers\Small\52.jpg" />
+    <Resource Include="Images\Customers\Small\53.jpg" />
+    <Resource Include="Images\Customers\Small\54.jpg" />
+    <Resource Include="Images\Customers\Small\55.jpg" />
+    <Resource Include="Images\Customers\Small\56.jpg" />
+    <Resource Include="Images\Customers\Small\57.jpg" />
+    <Resource Include="Images\Customers\Small\58.jpg" />
+    <Resource Include="Images\Customers\Small\59.jpg" />
+    <Resource Include="Images\Customers\Small\6.jpg" />
+    <Resource Include="Images\Customers\Small\60.jpg" />
+    <Resource Include="Images\Customers\Small\61.jpg" />
+    <Resource Include="Images\Customers\Small\62.jpg" />
+    <Resource Include="Images\Customers\Small\63.jpg" />
+    <Resource Include="Images\Customers\Small\64.jpg" />
+    <Resource Include="Images\Customers\Small\65.jpg" />
+    <Resource Include="Images\Customers\Small\66.jpg" />
+    <Resource Include="Images\Customers\Small\67.jpg" />
+    <Resource Include="Images\Customers\Small\68.jpg" />
+    <Resource Include="Images\Customers\Small\69.jpg" />
+    <Resource Include="Images\Customers\Small\7.jpg" />
+    <Resource Include="Images\Customers\Small\70.jpg" />
+    <Resource Include="Images\Customers\Small\71.jpg" />
+    <Resource Include="Images\Customers\Small\72.jpg" />
+    <Resource Include="Images\Customers\Small\73.jpg" />
+    <Resource Include="Images\Customers\Small\74.jpg" />
+    <Resource Include="Images\Customers\Small\75.jpg" />
+    <Resource Include="Images\Customers\Small\76.jpg" />
+    <Resource Include="Images\Customers\Small\77.jpg" />
+    <Resource Include="Images\Customers\Small\78.jpg" />
+    <Resource Include="Images\Customers\Small\79.jpg" />
+    <Resource Include="Images\Customers\Small\8.jpg" />
+    <Resource Include="Images\Customers\Small\80.jpg" />
+    <Resource Include="Images\Customers\Small\81.jpg" />
+    <Resource Include="Images\Customers\Small\82.jpg" />
+    <Resource Include="Images\Customers\Small\83.jpg" />
+    <Resource Include="Images\Customers\Small\84.jpg" />
+    <Resource Include="Images\Customers\Small\85.jpg" />
+    <Resource Include="Images\Customers\Small\86.jpg" />
+    <Resource Include="Images\Customers\Small\87.jpg" />
+    <Resource Include="Images\Customers\Small\88.jpg" />
+    <Resource Include="Images\Customers\Small\89.jpg" />
+    <Resource Include="Images\Customers\Small\9.jpg" />
+    <Resource Include="Images\Customers\Small\90.jpg" />
+    <Resource Include="Images\Customers\Small\91.jpg" />
+    <Resource Include="Images\Customers\Small\anon.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

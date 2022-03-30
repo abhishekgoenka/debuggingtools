@@ -1,0 +1,163 @@
+﻿<navigation:Page x:Class="Silverlight_Patterns_in_Action.Views.Customers" 
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           xmlns:viewmodel="clr-namespace:Silverlight_Patterns_in_Action.ViewModels"
+           mc:Ignorable="d"
+           xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+           d:DesignWidth="940" d:DesignHeight="480"
+           Title="Maintain Customers" 
+           xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+           xmlns:data="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data"
+           xmlns:dataform="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Data.DataForm.Toolkit"
+            >
+
+    <navigation:Page.Resources>
+        <viewmodel:CustomerViewModel  x:Key="MyCustomerViewModel" />
+    </navigation:Page.Resources>
+
+    <Grid x:Name="LayoutRoot" 
+          DataContext="{Binding Source={StaticResource MyCustomerViewModel}}" >
+        
+        <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}" >
+
+            <StackPanel x:Name="ContentStackPanel" Style="{StaticResource ContentStackPanelStyle}">
+
+                <StackPanel Width="800" HorizontalAlignment="Center">
+
+                    <TextBlock x:Name="HeaderText" Style="{StaticResource HeaderTextStyle}" 
+                           Text="{Binding Path=ApplicationStrings.CustomersPageTitle, Source={StaticResource ResourceWrapper}}"/>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="440" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1" >
+                            <Button Name="ButtonAdd" Content="Add Customer" Margin="0,20,10,20" Width="100" HorizontalAlignment="Left"
+                                Command="{Binding AddCommand}" />
+                            <Button Name="ButtonEdit" Content="Edit Customer" Margin="10,20,10,20" Width="100"  HorizontalAlignment="Left"
+                                Command="{Binding EditCommand}" />
+                            <Button Name="ButtonDelete" Content="Delete Customer" Margin="10,20,10,20" Width="100"  HorizontalAlignment="Left"
+                                Command="{Binding DeleteCommand}" />
+                        </StackPanel>
+
+
+                        <data:DataGrid AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" Height="418" HorizontalAlignment="Left" 
+                               Name="DataGridCustomers" VerticalAlignment="Top" Width="400" IsReadOnly="True" 
+                               ItemsSource="{Binding Customers}"  
+                               SelectedItem="{Binding CurrentCustomer, Mode=TwoWay}" >
+
+                            <data:DataGrid.Columns>
+
+                                <data:DataGridTextColumn Header="Name" Binding="{Binding CompanyName}" Width="180"  />
+
+                                <data:DataGridTextColumn Header="City" Binding="{Binding City}" Width="110" />
+
+                                <data:DataGridTextColumn Header="Country" Binding="{Binding Country}" Width="90" />
+
+                            </data:DataGrid.Columns>
+                        </data:DataGrid>
+
+
+                        <StackPanel Grid.Row="1" Grid.Column="1" >
+                            <dataform:DataForm Name="DataFormCustomer" Height="300" Width="340" 
+                                   HorizontalAlignment="Left" VerticalAlignment="Top" AutoEdit="False"
+                                   Header="Customer Details" AutoGenerateFields="False"  CommandButtonsVisibility="None"
+                                   CurrentItem="{Binding ElementName=DataGridCustomers, 
+                                                         Path=SelectedItem, Mode=TwoWay}"
+                                          
+                                           >
+                                <dataform:DataForm.ReadOnlyTemplate>
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="27"  />
+                                                    <RowDefinition Height="27" />
+                                                    <RowDefinition Height="27" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="85" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Name" FontWeight="Bold" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Row="1" Grid.Column="0" Text="City" FontWeight="Bold" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Country"  FontWeight="Bold" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Photo"  FontWeight="Bold" Margin="0,10,0,0"/>
+                                                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding CompanyName}" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding City}" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Country}" VerticalAlignment="Center"/>
+
+                                                <Border Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" BorderBrush="#CCCCCC" BorderThickness="1" Height="108" Width="108" Margin="0,10,0,0"  Padding="4" Background="White">
+                                                    <Image Height="100" Width="100" 
+                                                           Source="{Binding CustomerId, 
+                                                                    Converter={StaticResource MyCustomerImageConverter},    
+                                                                    ConverterParameter=Large}"  />
+                                                </Border>
+                                            </Grid>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </dataform:DataForm.ReadOnlyTemplate>
+
+                                <dataform:DataForm.EditTemplate>
+
+                                    <DataTemplate>
+                                        <StackPanel>
+                                            <Grid >
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="27" />
+                                                    <RowDefinition Height="27" />
+                                                    <RowDefinition Height="27" />
+                                                    <RowDefinition Height="*" />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="85" />
+                                                    <ColumnDefinition Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <TextBlock Grid.Row="0" Grid.Column="0" Text="Name" FontWeight="Bold" VerticalAlignment="Center" />
+                                                <TextBlock Grid.Row="1" Grid.Column="0" Text="City" FontWeight="Bold" VerticalAlignment="Center" />
+                                                <TextBlock Grid.Row="2" Grid.Column="0" Text="Country"  FontWeight="Bold" VerticalAlignment="Center"/>
+                                                <TextBlock Grid.Row="3" Grid.Column="0" Text="Photo"  FontWeight="Bold"  Margin="0, 10,0,0"/>
+                                                <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding CompanyName, Mode=TwoWay}" Height="23" VerticalAlignment="Center" />
+                                                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding City, Mode=TwoWay}" Height="23" VerticalAlignment="Center" />
+                                                <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Country, Mode=TwoWay}" Height="23"  VerticalAlignment="Center" />
+                                                <Border Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" BorderBrush="#CCCCCC" BorderThickness="1" Height="108" Width="108" Margin="0,10,0,0"  Padding="4" Background="White">
+                                                    <Image Height="100" Width="100" 
+                                                           Source="{Binding CustomerId, Converter={StaticResource MyCustomerImageConverter}, ConverterParameter=Large}"  />
+                                                </Border>
+
+                                            </Grid>
+                                        </StackPanel>
+
+                                    </DataTemplate>
+
+                                </dataform:DataForm.EditTemplate>
+                            </dataform:DataForm>
+                            <StackPanel Orientation="Horizontal" Width="440" HorizontalAlignment="Left" >
+                              
+                                <Button Name="ButtonSave" Content="Save Changes" Width="110" Margin="0,20"
+                            Command="{Binding SaveCommand}" />
+                                <Button Name="ButtonCancel" Content="Cancel Changes" Width="110" Margin="20"
+                            Command="{Binding CancelCommand}" />
+                                
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                <TextBlock Name="TextBlockStatus"  Foreground="Red" 
+                                       Text="{Binding Status}" Margin="0,20" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</navigation:Page>
